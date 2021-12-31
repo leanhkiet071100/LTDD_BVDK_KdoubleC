@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Login.dart';
+import 'Setinfor.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'BVDK_KDoubleC',
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: SetInfor(),
     );
   }
 }
