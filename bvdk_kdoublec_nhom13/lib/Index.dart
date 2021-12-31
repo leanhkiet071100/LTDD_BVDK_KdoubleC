@@ -79,7 +79,7 @@ class IndexState extends State<Index> {
               alignment: Alignment.center,
               padding: EdgeInsets.only(left: 5, right: 5),
               child: Card(
-                color: Colors.grey[300],
+                color: Colors.white,
                 child: Column(
                   children: [
                     ListTile(

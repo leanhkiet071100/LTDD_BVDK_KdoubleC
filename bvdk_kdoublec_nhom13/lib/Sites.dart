@@ -186,6 +186,7 @@ class SitesState extends State<Sites> {
             Card(
               color: Colors.grey[300],
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     padding: EdgeInsets.all(5),
