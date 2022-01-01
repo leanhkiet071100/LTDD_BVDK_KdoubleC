@@ -51,93 +51,43 @@ class HightlightState extends State<Hightlight> {
       ),
     ),
   );
-  Widget Hightlight_month = Card(
-    color: Colors.grey[300],
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  Widget Hightlight_month = Container(
+    padding: EdgeInsets.all(10),
+    child: Stack(
       children: [
         Container(
-          padding: EdgeInsets.all(5),
+          width: 400,
+          height: 175,
           child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+            borderRadius: BorderRadius.all(Radius.circular(30)),
             child: Image.asset(
-              'images/bk4.jpg',
-              width: 150,
-              height: 150,
+              'images/bk3.jpg',
               fit: BoxFit.cover,
             ),
           ),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: EdgeInsets.only(left: 15, top: 10),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Tam Bình - Vĩnh Long',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
+        Container(
+          padding: EdgeInsets.only(left: 10, top: 5),
+          alignment: Alignment.topLeft,
+          child: Column(
+            children: [
+              TextButton(
+                child: Text(
+                  'Tam Bình - Vĩnh Long',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+                onPressed: () {},
               ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 15, top: 10),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.location_on_outlined,
-                    color: Colors.red,
-                  ),
-                  Text(
-                    'Địa chỉ: 18c, Tổ 5, Khóm 3,\n'
-                    'TT Tam Bình, H.Tam Bình, T.Vĩnh Long ',
-                    style: TextStyle(color: Colors.black, fontSize: 12),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
+              Text(
+                'Điểm đến hot nhất tháng',
+                style: TextStyle(color: Colors.black, fontSize: 16),
               ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 15, top: 10),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.map_outlined,
-                    color: Colors.blue,
-                  ),
-                  Text(
-                    'Kinh độ: 10.049445 \n'
-                    'Vĩ độ: 105.999843',
-                    style: TextStyle(color: Colors.black, fontSize: 12),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 15, top: 10),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.note,
-                    color: Colors.green,
-                  ),
-                  Text(
-                    'Điểm đến được thích nhiều nhất \ntháng này.',
-                    style: TextStyle(color: Colors.black, fontSize: 14),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward_ios))
       ],
     ),
   );
@@ -192,18 +142,6 @@ class HightlightState extends State<Hightlight> {
           ),
           Padding(
             padding: EdgeInsets.only(left: 10, right: 10),
-            child: Hightlight_month,
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-            child: Hightlight_month,
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-            child: Hightlight_month,
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: 10, left: 10, right: 10),
             child: Hightlight_month,
           ),
         ],

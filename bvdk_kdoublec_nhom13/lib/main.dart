@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'BVDK_KDoubleC',
       debugShowCheckedModeBanner: false,
-      home: SetInfor(),
+      home: Login(),
     );
   }
 }
