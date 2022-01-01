@@ -3,6 +3,7 @@ import 'Higthligth.dart';
 import 'Category.dart';
 import 'Index.dart';
 import 'Perinfor.dart';
+import 'notifications/notifications.dart';
 
 class ScreenMain extends StatefulWidget {
   const ScreenMain({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class _ScreenMainState extends State<ScreenMain> {
     Hightlight(),
     Category(),
     Index(),
-    Text('Cá nhân'),
+    Notifications(),
     PerInfor(),
   ];
   @override

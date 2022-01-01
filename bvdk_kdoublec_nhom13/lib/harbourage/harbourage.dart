@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 
 import '../Search.dart';
 
-class harbourage extends StatefulWidget {
+class Harbourage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return harbourageState();
+    return HarbourageState();
   }
 }
 
-class harbourageState extends State<harbourage> {
+class HarbourageState extends State<Harbourage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

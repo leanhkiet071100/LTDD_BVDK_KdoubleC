@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Search.dart';
 import 'Sites.dart';
+import 'post/post.dart';
 
 class Index extends StatefulWidget {
   const Index({Key? key}) : super(key: key);
@@ -12,30 +13,6 @@ class Index extends StatefulWidget {
 }
 
 class IndexState extends State<Index> {
-  Widget Createrost = Container(
-    alignment: Alignment.center,
-    padding: EdgeInsets.only(left: 5, right: 5),
-    child: Card(
-      color: Colors.white,
-      child: ListTile(
-        leading: CircleAvatar(
-          child: Text('C'),
-          backgroundColor: Colors.black,
-        ),
-        title: TextField(
-          enabled: false,
-          decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-            ),
-            hintText: "Tạo bài viết mới",
-          ),
-        ),
-        trailing: Icon(Icons.add),
-        onTap: () {},
-      ),
-    ),
-  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +51,35 @@ class IndexState extends State<Index> {
       body: Center(
         child: ListView(
           children: <Widget>[
-            Createrost,
+            Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(left: 5, right: 5),
+              child: Card(
+                color: Colors.white,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    child: Text('C'),
+                    backgroundColor: Colors.black,
+                  ),
+                  title: TextField(
+                    enabled: false,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      hintText: "Tạo bài viết mới",
+                    ),
+                  ),
+                  trailing: Icon(Icons.add),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Post();
+                    }));
+                  },
+                ),
+              ),
+            ),
             Container(
               alignment: Alignment.center,
               padding: EdgeInsets.only(left: 5, right: 5),
@@ -190,7 +195,7 @@ class IndexState extends State<Index> {
                     ),
                     Container(
                       alignment: Alignment.centerLeft,
-                      padding: EdgeInsets.only(top: 5, left: 20, bottom: 10),
+                      padding: EdgeInsets.only(top: 5, left: 20),
                       child: Text(
                         'Bình luận: ',
                         style: TextStyle(fontWeight: FontWeight.bold),

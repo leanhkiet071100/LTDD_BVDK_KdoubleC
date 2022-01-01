@@ -53,7 +53,7 @@ class SitesdetailsState extends State<Sitesdetails> {
             Container(
               padding: EdgeInsets.only(top: 5),
               child: Card(
-                color: Colors.grey[300],
+                color: Colors.white,
                 child: Column(
                   children: [
                     Container(
@@ -64,9 +64,6 @@ class SitesdetailsState extends State<Sitesdetails> {
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
-                        trailing: IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.arrow_forward_ios)),
                       ),
                     ),
                     Container(
@@ -146,10 +143,15 @@ class SitesdetailsState extends State<Sitesdetails> {
                               color: Colors.blue,
                             ),
                           ),
-                          Container(
-                            child: Text(
-                              'Vùng đất nẳm ở trung tỉnh Bình Định, huyện Tây Sơn mang \nđến cho chúng ta nhũng trãi nghiệm thật tuyệt vời. Đến đây \n bạn sẽ được tận hưởng hương vị của miền Trung Việt Nam, \nnhiều món ăn ngon, nhiều nới du lịch, nghĩ dưỡng hạng cao, \nchắc chắn bạn sẽ có một trải nghiệm tuyệt vời.',
-                              style: TextStyle(fontSize: 16),
+                          Flexible(
+                            child: Container(
+                              child: Text(
+                                'Vùng đất nẳm ở trung tỉnh Bình Định, huyện Tây Sơn mang đến cho chúng ta nhũng trãi nghiệm thật tuyệt vời. Đến đây bạn sẽ được tận hưởng hương vị của miền Trung Việt Nam, nhiều món ăn ngon, nhiều nới du lịch, nghĩ dưỡng hạng cao, chắc chắn bạn sẽ có một trải nghiệm tuyệt vời.',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -170,7 +172,7 @@ class SitesdetailsState extends State<Sitesdetails> {
             Container(
               padding: EdgeInsets.only(top: 5),
               child: Card(
-                color: Colors.grey[300],
+                color: Colors.white,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

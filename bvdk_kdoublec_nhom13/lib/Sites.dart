@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'Search.dart';
 import 'Sitesdetails.dart';
+import 'food/food.dart';
+import 'food/restaurant.dart';
+import 'harbourage/harbourage.dart';
 
 class Sites extends StatefulWidget {
   const Sites({Key? key}) : super(key: key);
@@ -54,7 +57,7 @@ class SitesState extends State<Sites> {
               Container(
                 padding: EdgeInsets.only(top: 5),
                 child: Card(
-                  color: Colors.grey[300],
+                  color: Colors.white,
                   child: Column(
                     children: [
                       Container(
@@ -152,10 +155,99 @@ class SitesState extends State<Sites> {
                                 color: Colors.blue,
                               ),
                             ),
+                            Flexible(
+                              child: Container(
+                                child: Text(
+                                  'Vùng đất nẳm ở trung tỉnh Bình Định, huyện Tây Sơn mang đến cho chúng ta nhũng trãi nghiệm thật tuyệt vời. Đến đây bạn sẽ được tận hưởng hương vị của miền Trung Việt Nam, nhiều món ăn ngon, nhiều nới du lịch, nghĩ dưỡng hạng cao, chắc chắn bạn sẽ có một trải nghiệm tuyệt vời.',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
                             Container(
-                              child: Text(
-                                'Vùng đất nẳm ở trung tỉnh Bình Định, huyện Tây Sơn mang \nđến cho chúng ta nhũng trãi nghiệm thật tuyệt vời. Đến đây \n bạn sẽ được tận hưởng hương vị của miền Trung Việt Nam, \nnhiều món ăn ngon, nhiều nới du lịch, nghĩ dưỡng hạng cao, \nchắc chắn bạn sẽ có một trải nghiệm tuyệt vời.',
-                                style: TextStyle(fontSize: 16),
+                              width: 110,
+                              child: TextButton(
+                                child: Text(
+                                  'Xem bản đồ',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                      Color(0xffA6ED4B)),
+                                  shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(20))),
+                                ),
+                                onPressed: () {},
+                              ),
+                            ),
+                            Container(
+                              width: 110,
+                              child: TextButton(
+                                child: Text(
+                                  'Xem quán ăn',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                      Color(0xffA6ED4B)),
+                                  shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(20))),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return Restaurant();
+                                  }));
+                                },
+                              ),
+                            ),
+                            Container(
+                              width: 110,
+                              child: TextButton(
+                                child: Text(
+                                  'Xem nơi ở',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                      Color(0xffA6ED4B)),
+                                  shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(20))),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return Harbourage();
+                                  }));
+                                },
                               ),
                             ),
                           ],
@@ -192,7 +284,7 @@ class SitesState extends State<Sites> {
                   return Container(
                     padding: EdgeInsets.only(top: 5, bottom: 5),
                     child: Card(
-                      color: Colors.grey[300],
+                      color: Colors.white,
                       child: Column(
                         children: [
                           Container(
