@@ -1,6 +1,7 @@
 import 'package:bvdk_kdoublec_nhom13/food/food.dart';
 import 'package:bvdk_kdoublec_nhom13/food/restaurant.dart';
 import 'package:bvdk_kdoublec_nhom13/harbourage/harbourage.dart';
+import 'package:bvdk_kdoublec_nhom13/load/load.dart';
 import 'package:bvdk_kdoublec_nhom13/notifications/notifications.dart';
 import 'package:bvdk_kdoublec_nhom13/post/post.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'BVDK_KDoubleC',
       debugShowCheckedModeBanner: false,
-      home: Post(),
+      home: Login(),
     );
   }
 }
