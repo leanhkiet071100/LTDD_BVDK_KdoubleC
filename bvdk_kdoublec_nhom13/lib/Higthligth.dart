@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Search.dart';
+import 'Sites.dart';
 
 class Hightlight extends StatefulWidget {
   const Hightlight({Key? key}) : super(key: key);
@@ -51,93 +52,125 @@ class HightlightState extends State<Hightlight> {
       ),
     ),
   );
-  Widget Hightlight_month = Card(
-    color: Colors.grey[300],
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  Widget Hightlight_month = Container(
+    padding: EdgeInsets.all(10),
+    child: Stack(
       children: [
         Container(
-          padding: EdgeInsets.all(5),
+          width: 400,
+          height: 175,
           child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+            borderRadius: BorderRadius.all(Radius.circular(30)),
             child: Image.asset(
-              'images/bk4.jpg',
-              width: 150,
-              height: 150,
+              'images/bk3.jpg',
               fit: BoxFit.cover,
             ),
           ),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        Container(
+          padding: EdgeInsets.only(left: 10, top: 5),
+          alignment: Alignment.topLeft,
+          child: Column(
+            children: [
+              TextButton(
+                child: Text(
+                  'Tam Bình - Vĩnh Long',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+                onPressed: () {},
+              ),
+              Text(
+                'Điểm đến hot nhất tháng',
+                style: TextStyle(color: Colors.black, fontSize: 16),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+  Widget Hightlight_month1 = Container(
+    padding: EdgeInsets.all(10),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Stack(
           children: [
             Container(
-              padding: EdgeInsets.only(left: 15, top: 10),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Tam Bình - Vĩnh Long',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
+              width: 180,
+              height: 175,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(30)),
+                child: Image.asset(
+                  'images/bk2.jpg',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 15, top: 10),
-              alignment: Alignment.centerLeft,
-              child: Row(
+              padding: EdgeInsets.only(left: 10, top: 5),
+              alignment: Alignment.topCenter,
+              child: Column(
                 children: [
-                  Icon(
-                    Icons.location_on_outlined,
-                    color: Colors.red,
+                  TextButton(
+                    child: Text(
+                      'Tam Bình - Vĩnh Long',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    onPressed: () {},
                   ),
                   Text(
-                    'Địa chỉ: 18c, Tổ 5, Khóm 3,\n'
-                    'TT Tam Bình, H.Tam Bình, T.Vĩnh Long ',
-                    style: TextStyle(color: Colors.black, fontSize: 12),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 15, top: 10),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.map_outlined,
-                    color: Colors.blue,
-                  ),
-                  Text(
-                    'Kinh độ: 10.049445 \n'
-                    'Vĩ độ: 105.999843',
-                    style: TextStyle(color: Colors.black, fontSize: 12),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 15, top: 10),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.note,
-                    color: Colors.green,
-                  ),
-                  Text(
-                    'Điểm đến được thích nhiều nhất \ntháng này.',
-                    style: TextStyle(color: Colors.black, fontSize: 14),
-                    overflow: TextOverflow.ellipsis,
+                    'Điểm đến hot nhất tháng',
+                    style: TextStyle(color: Colors.black, fontSize: 13),
                   ),
                 ],
               ),
             ),
           ],
         ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward_ios))
+        Stack(
+          children: [
+            Container(
+              width: 180,
+              height: 175,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(30)),
+                child: Image.asset(
+                  'images/bk2.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 10, top: 5),
+              alignment: Alignment.topCenter,
+              child: Column(
+                children: [
+                  TextButton(
+                    child: Text(
+                      'Tam Bình - Vĩnh Long',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    onPressed: () {},
+                  ),
+                  Text(
+                    'Điểm đến hot nhất tháng',
+                    style: TextStyle(color: Colors.black, fontSize: 13),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ],
     ),
   );
@@ -180,7 +213,7 @@ class HightlightState extends State<Hightlight> {
         children: <Widget>[
           imgScr,
           Container(
-            padding: EdgeInsets.only(top: 10, bottom: 10),
+            padding: EdgeInsets.only(top: 10),
             alignment: Alignment.center,
             child: Text(
               'NỔI BẬT TRONG THÁNG',
@@ -190,21 +223,329 @@ class HightlightState extends State<Hightlight> {
                   fontSize: 25),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 10, right: 10),
-            child: Hightlight_month,
+          Hightlight_month,
+          Hightlight_month1,
+          Hightlight_month1,
+          Container(
+            padding: EdgeInsets.only(top: 10, bottom: 10),
+            alignment: Alignment.center,
+            child: Text(
+              'NỔI BẬT VÙNG MIỀN',
+              style: TextStyle(
+                  color: Color(0xffA6ED4B),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25),
+            ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-            child: Hightlight_month,
+          Container(
+            padding: EdgeInsets.only(top: 5, left: 10, bottom: 5),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Miền Nam',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  fontStyle: FontStyle.italic),
+            ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-            child: Hightlight_month,
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Stack(
+              children: [
+                Container(
+                  width: 400,
+                  height: 175,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    child: Image.asset(
+                      'images/bk2.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 10, top: 5),
+                  alignment: Alignment.topLeft,
+                  child: Column(
+                    children: [
+                      TextButton(
+                        child: Text(
+                          'Tam Bình - Vĩnh Long',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        onPressed: () {},
+                      ),
+                      Text(
+                        'Điểm đến hot nhất miền Nam',
+                        style: TextStyle(color: Colors.black, fontSize: 16),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-            child: Hightlight_month,
+          Container(
+            padding: EdgeInsets.only(top: 5, left: 10, bottom: 5),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Miền Trung',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  fontStyle: FontStyle.italic),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Stack(
+              children: [
+                Container(
+                  width: 400,
+                  height: 175,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    child: Image.asset(
+                      'images/bk3.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 10, top: 5),
+                  alignment: Alignment.topLeft,
+                  child: Column(
+                    children: [
+                      TextButton(
+                        child: Text(
+                          'Tây Sơn - Bình Định',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        onPressed: () {},
+                      ),
+                      Text(
+                        'Điểm đến hot nhất miền Trung',
+                        style: TextStyle(color: Colors.black, fontSize: 16),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 5, left: 10, bottom: 5),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Miền Bắc',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  fontStyle: FontStyle.italic),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Stack(
+              children: [
+                Container(
+                  width: 400,
+                  height: 175,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    child: Image.asset(
+                      'images/bk6.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 10, top: 5),
+                  alignment: Alignment.topLeft,
+                  child: Column(
+                    children: [
+                      TextButton(
+                        child: Text(
+                          'Sa Pa - Lào Cai',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        onPressed: () {},
+                      ),
+                      Text(
+                        'Điểm đến hot nhất miền Bắc',
+                        style: TextStyle(color: Colors.black, fontSize: 16),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 10, bottom: 10),
+            alignment: Alignment.center,
+            child: Text(
+              'BÀI VIẾT NỔI BẬT',
+              style: TextStyle(
+                  color: Color(0xffA6ED4B),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.only(left: 5, right: 5),
+            child: Card(
+              color: Colors.white,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: CircleAvatar(
+                      child: Text('Q'),
+                    ),
+                    title: Text(
+                      'Nguyễn Thanh Quí',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    trailing: PopupMenuButton(
+                      icon: Icon(Icons.more_horiz),
+                      itemBuilder: (context) => [
+                        PopupMenuItem(
+                          child: ListTile(
+                            leading: Icon(Icons.flag_outlined),
+                            title: Text('Lưu Bài Viết'),
+                            subtitle: Text('Lưu bài viết vào danh sách'),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          child: ListTile(
+                            leading: Icon(Icons.star_border_outlined),
+                            title: Text('Ẩn bài viết'),
+                            subtitle: Text('Ẩn đến khi nào được bạn mở lại'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.all(10),
+                    child: Text('Nơi đây thật tuyệt vời'),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(bottom: 5),
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return Sites();
+                              }));
+                            },
+                            child: Text(
+                              'Điểm đến: Tây Sơn - Bình Định',
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic),
+                            ),
+                          ),
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          child: Image.asset(
+                            'images/bk3.jpg',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(top: 5, left: 10),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.favorite,
+                            color: Colors.red,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.comment,
+                            color: Colors.blue,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.share,
+                            color: Colors.green,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.only(top: 5, left: 20, bottom: 10),
+                    child: Text('Lưu Thành Công và 69 người đã thích.'),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.only(top: 5, left: 20),
+                    child: Text(
+                      'Bình luận: ',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.only(top: 2, left: 40, bottom: 10),
+                    child: Row(
+                      children: [
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Lưu Thành Công:',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Text('Nơi này đẹp quá.')
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
