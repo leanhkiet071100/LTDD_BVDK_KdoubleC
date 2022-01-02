@@ -7,6 +7,9 @@ import 'package:bvdk_kdoublec_nhom13/post/post.dart';
 
 import 'package:flutter/material.dart';
 import 'Login.dart';
+import 'food/food.dart';
+import 'food/restaurant.dart';
+import 'harbourage/harbourage.dart';
 
 void main() {
   runApp(const MyApp());
