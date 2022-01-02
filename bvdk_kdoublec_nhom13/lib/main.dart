@@ -10,6 +10,9 @@ import 'Login.dart';
 import 'food/food.dart';
 import 'food/restaurant.dart';
 import 'harbourage/harbourage.dart';
+import 'SetPerInfor.dart';
+import 'SetPass.dart';
+import 'SercuInfo.dart';
 
 void main() {
   runApp(const MyApp());
