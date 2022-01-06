@@ -220,6 +220,7 @@ class HightlightState extends State<Hightlight> {
               style: TextStyle(
                   color: Color(0xffA6ED4B),
                   fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
                   fontSize: 25),
             ),
           ),

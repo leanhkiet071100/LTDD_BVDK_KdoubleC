@@ -15,7 +15,7 @@ class _DiaDanhState extends State<DiaDanh> {
         title: Center(
           child: Text(
             "DANH SÁCH ĐỊA DANH",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Color(0xffA6ED4B)),
           ),
         ),
         backgroundColor: Colors.white,

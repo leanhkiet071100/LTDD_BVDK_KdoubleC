@@ -1,3 +1,4 @@
+import 'package:bvdk_kdoublec_nhom13/Login.dart';
 import 'package:flutter/material.dart';
 import 'Search.dart';
 import 'Sites.dart';
@@ -115,7 +116,9 @@ class PerInforState extends State<PerInfor> {
             padding: EdgeInsets.only(right: 5),
             child: IconButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Login();
+                }));
               },
               icon: Icon(
                 Icons.logout,
