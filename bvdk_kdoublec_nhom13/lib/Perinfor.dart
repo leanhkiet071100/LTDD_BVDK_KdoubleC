@@ -1,3 +1,4 @@
+import 'package:bvdk_kdoublec_nhom13/Login.dart';
 import 'package:flutter/material.dart';
 import 'Search.dart';
 import 'Sites.dart';
@@ -28,8 +29,7 @@ class PerInforState extends State<PerInfor> {
             padding: EdgeInsets.only(top: 65),
             child: CircleAvatar(
               radius: 80,
-              backgroundImage:
-                  NetworkImage("https://s3.o7planning.com/images/boy-128.png"),
+              backgroundImage: AssetImage('images/bk5.jpg'),
               backgroundColor: Colors.black,
             ),
           ),
@@ -49,12 +49,10 @@ class PerInforState extends State<PerInfor> {
     padding: EdgeInsets.only(top: 20, left: 20, right: 20),
     alignment: Alignment.center,
     child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          width: 220,
-          height: 50,
+          width: 175,
           child: TextButton(
             onPressed: () {},
             child: Text(
@@ -72,8 +70,7 @@ class PerInforState extends State<PerInfor> {
           ),
         ),
         Container(
-          width: 220,
-          height: 50,
+          width: 175,
           child: TextButton(
             onPressed: () {},
             child: Text(
@@ -119,7 +116,9 @@ class PerInforState extends State<PerInfor> {
             padding: EdgeInsets.only(right: 5),
             child: IconButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Login();
+                }));
               },
               icon: Icon(
                 Icons.logout,

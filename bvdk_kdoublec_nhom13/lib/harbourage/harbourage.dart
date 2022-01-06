@@ -1,109 +1,207 @@
-import 'package:bvdk_kdoublec_nhom13/Layout/layout.dart';
-import 'package:bvdk_kdoublec_nhom13/food/food.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Search.dart';
 
-class harbourage extends StatefulWidget {
+class Harbourage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return harbourageState();
+    return HarbourageState();
   }
 }
 
-class harbourageState extends State<harbourage> {
+class HarbourageState extends State<Harbourage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffA6ED4B),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Search();
-              }));
-            },
-            icon: Icon(
-              Icons.search,
-              color: Colors.black,
-            ),
-          ),
-          CircleAvatar(
-            child: Text('C'),
-            backgroundColor: Colors.black,
-          ),
-          Padding(
-            padding: EdgeInsets.only(right: 5),
-            child: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(
-                Icons.logout,
-                color: Colors.black,
+        title: Text('Nơi lưu trú ở + (thuộc địa danh)'),
+      ),
+      body: Center(
+        child: ListView(
+          children: [
+            Container(
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(50),
+                    bottomLeft: Radius.circular(50)),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Image.asset(
+                      'images/khachsan/KS1.jpg',
+                      width: 500,
+                      height: 225,
+                      fit: BoxFit.cover,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top: 15),
+                      child: Text(
+                        'Nơi lưu trú',
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            layout(),
             Container(
-              padding: EdgeInsets.only(top: 5, bottom: 5),
+              padding: EdgeInsets.only(top: 10),
               alignment: Alignment.center,
               child: Text(
-                'Nơi lưu trú',
+                'DANH SÁCH NƠI LƯU TRÚ',
                 style: TextStyle(
                     color: Color(0xffA6ED4B),
                     fontWeight: FontWeight.bold,
                     fontSize: 25),
               ),
             ),
-            ListView.builder(
-              shrinkWrap: true,
-              itemCount: 5,
-              itemBuilder: (context, index) => Card(
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  child: Card(
-                    child: Column(
-                      children: [
-                        ListTile(
-                          leading: Image.network('images/bk1.jpg'),
-                          subtitle: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Địa nơi lưu trú',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.red),
-                                ),
-                                Text(
-                                  'Số điện thoại',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.red),
-                                ),
-                              ],
-                            ),
-                          ),
-                          title: Text(
-                            'Tên nơi lưu trú',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                          onTap: () {},
-                        ),
-                      ],
+            Container(
+              width: 300,
+              height: 175,
+              padding: EdgeInsets.all(10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                child: Image.asset(
+                  'images/khachsan/KS3.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 10, bottom: 5),
+              child: Text(
+                'Khách sạn King Hotel',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic),
+              ),
+            ),
+            Container(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 10, bottom: 20),
+                    child: Icon(
+                      Icons.location_on,
+                      color: Colors.blue,
                     ),
                   ),
+                  Flexible(
+                    child: Container(
+                      child: Text(
+                        'Số 12, đường N14, xã Trung Hòa, huyện Trảng Bom, tỉnh Đồng Nai.',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 10, bottom: 10),
+                    child: Icon(
+                      Icons.phone,
+                      color: Colors.red,
+                    ),
+                  ),
+                  Flexible(
+                    child: Container(
+                      child: Text(
+                        '0123654987',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              width: 300,
+              height: 175,
+              padding: EdgeInsets.all(10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                child: Image.asset(
+                  'images/khachsan/KS2.jpg',
+                  fit: BoxFit.cover,
                 ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 10, bottom: 5),
+              child: Text(
+                'Khách sạn King Hotel',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic),
+              ),
+            ),
+            Container(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 10, bottom: 20),
+                    child: Icon(
+                      Icons.location_on,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Flexible(
+                    child: Container(
+                      child: Text(
+                        'Số 12, đường N14, xã Trung Hòa, huyện Trảng Bom, tỉnh Đồng Nai.',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 10, bottom: 10),
+                    child: Icon(
+                      Icons.phone,
+                      color: Colors.red,
+                    ),
+                  ),
+                  Flexible(
+                    child: Container(
+                      child: Text(
+                        '0123654987',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

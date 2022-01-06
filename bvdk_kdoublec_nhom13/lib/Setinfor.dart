@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'SercuInfo.dart';
+import 'SetPerInfor.dart';
+import 'SetPass.dart';
 
 class SetInfor extends StatefulWidget {
   const SetInfor({Key? key}) : super(key: key);
@@ -51,7 +54,11 @@ class SetInforState extends State<SetInfor> {
               padding: EdgeInsets.only(top: 10, left: 10, right: 10),
               alignment: Alignment.centerLeft,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return SetPerInfor();
+                  }));
+                },
                 child: Text(
                   'Chỉnh sửa thông tin cá nhân',
                   style: TextStyle(
@@ -68,7 +75,11 @@ class SetInforState extends State<SetInfor> {
               padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               alignment: Alignment.centerLeft,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return SetPass();
+                  }));
+                },
                 child: Text(
                   'Đổi mật khẩu',
                   style: TextStyle(
@@ -83,7 +94,11 @@ class SetInforState extends State<SetInfor> {
               padding: EdgeInsets.only(top: 10, left: 10, right: 10),
               alignment: Alignment.centerLeft,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return SercuInfo();
+                  }));
+                },
                 child: Text(
                   'Quyền riêng tư',
                   style: TextStyle(
