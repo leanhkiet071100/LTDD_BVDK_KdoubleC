@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'DiaDanh/diadanh.dart';
 import 'Search.dart';
 
 class Category extends StatefulWidget {
@@ -59,19 +60,39 @@ class CategoryState extends State<Category> {
                   alignment: Alignment.center,
                   children: [
                     Image.asset(
-                      'images/bk1.jpg',
+                      'images/bk3.jpg',
                       width: 500,
-                      height: 225,
+                      height: 200,
                       fit: BoxFit.cover,
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 15),
-                      child: Text(
-                        'Nhu Cầu',
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      padding: EdgeInsets.only(bottom: 50),
+                      child: Text('Cùng khám phá Việt Nam nào !!',
+                          style: TextStyle(color: Colors.white, fontSize: 16)),
+                    ),
+                    Container(
+                      height: 60,
+                      width: 150,
+                      padding: EdgeInsets.only(top: 20),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return DiaDanh();
+                          }));
+                        },
+                        child: Text(
+                          'Khám phá',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.black),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(60))),
+                        ),
                       ),
                     ),
                   ],
@@ -238,43 +259,41 @@ class CategoryState extends State<Category> {
               padding: EdgeInsets.all(5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Stack(
                     children: [
-                      Container(
-                        width: 180,
-                        height: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          child: Image.asset(
-                            'images/bk12.jpg',
-                            fit: BoxFit.cover,
-                          ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10))),
                         ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 5),
-                        alignment: Alignment.bottomCenter,
+                        onPressed: () {},
                         child: Column(
                           children: [
-                            TextButton(
-                              child: Text(
-                                'Cấm trại',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              width: 155,
+                              height: 150,
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'images/bk12.jpg',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color(0xffA6ED4B)),
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(60))),
-                              ),
-                              onPressed: () {},
+                            ),
+                            Text(
+                              'Cắm trại',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -283,40 +302,37 @@ class CategoryState extends State<Category> {
                   ),
                   Stack(
                     children: [
-                      Container(
-                        width: 180,
-                        height: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          child: Image.asset(
-                            'images/bk13.jpg',
-                            fit: BoxFit.cover,
-                          ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10))),
                         ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 5),
-                        alignment: Alignment.bottomCenter,
+                        onPressed: () {},
                         child: Column(
                           children: [
-                            TextButton(
-                              child: Text(
-                                'Du lịch',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              width: 155,
+                              height: 150,
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'images/bk13.jpg',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color(0xffA6ED4B)),
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(60))),
-                              ),
-                              onPressed: () {},
+                            ),
+                            Text(
+                              'Du lịch',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -330,43 +346,41 @@ class CategoryState extends State<Category> {
               padding: EdgeInsets.all(5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Stack(
                     children: [
-                      Container(
-                        width: 180,
-                        height: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          child: Image.asset(
-                            'images/bk14.jpg',
-                            fit: BoxFit.cover,
-                          ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10))),
                         ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 5),
-                        alignment: Alignment.bottomCenter,
+                        onPressed: () {},
                         child: Column(
                           children: [
-                            TextButton(
-                              child: Text(
-                                'Dã ngoại',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              width: 155,
+                              height: 150,
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'images/bk14.jpg',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color(0xffA6ED4B)),
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(60))),
-                              ),
-                              onPressed: () {},
+                            ),
+                            Text(
+                              'Dã ngoại',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -375,40 +389,37 @@ class CategoryState extends State<Category> {
                   ),
                   Stack(
                     children: [
-                      Container(
-                        width: 180,
-                        height: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          child: Image.asset(
-                            'images/bk20.jpg',
-                            fit: BoxFit.cover,
-                          ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10))),
                         ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 5),
-                        alignment: Alignment.bottomCenter,
+                        onPressed: () {},
                         child: Column(
                           children: [
-                            TextButton(
-                              child: Text(
-                                'Nghĩ dưỡng',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              width: 155,
+                              height: 150,
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'images/bk16.jpg',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color(0xffA6ED4B)),
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(60))),
-                              ),
-                              onPressed: () {},
+                            ),
+                            Text(
+                              'Nghĩ dưỡng',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -422,43 +433,41 @@ class CategoryState extends State<Category> {
               padding: EdgeInsets.all(5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Stack(
                     children: [
-                      Container(
-                        width: 180,
-                        height: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          child: Image.asset(
-                            'images/bk21.jpg',
-                            fit: BoxFit.cover,
-                          ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10))),
                         ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 5),
-                        alignment: Alignment.bottomCenter,
+                        onPressed: () {},
                         child: Column(
                           children: [
-                            TextButton(
-                              child: Text(
-                                'Khám phá',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              width: 155,
+                              height: 150,
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'images/bk21.jpg',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color(0xffA6ED4B)),
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(60))),
-                              ),
-                              onPressed: () {},
+                            ),
+                            Text(
+                              'Khám phá',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -467,40 +476,37 @@ class CategoryState extends State<Category> {
                   ),
                   Stack(
                     children: [
-                      Container(
-                        width: 180,
-                        height: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          child: Image.asset(
-                            'images/bk15.jpg',
-                            fit: BoxFit.cover,
-                          ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10))),
                         ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 5),
-                        alignment: Alignment.bottomCenter,
+                        onPressed: () {},
                         child: Column(
                           children: [
-                            TextButton(
-                              child: Text(
-                                'Leo núi',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              width: 155,
+                              height: 150,
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                child: Image.asset(
+                                  'images/bk15.jpg',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color(0xffA6ED4B)),
-                                shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(60))),
-                              ),
-                              onPressed: () {},
+                            ),
+                            Text(
+                              'Leo núi',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
