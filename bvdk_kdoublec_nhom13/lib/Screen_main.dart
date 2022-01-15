@@ -21,8 +21,8 @@ class _ScreenMainState extends State<ScreenMain> {
   }
 
   List<Widget> _widgetOptions = <Widget>[
-    Hightlight(),
     Category(),
+    Hightlight(),
     Index(),
     Notifications(),
     PerInfor(),

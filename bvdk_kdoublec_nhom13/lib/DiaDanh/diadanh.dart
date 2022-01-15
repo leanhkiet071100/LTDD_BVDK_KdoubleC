@@ -15,10 +15,10 @@ class _DiaDanhState extends State<DiaDanh> {
         title: Center(
           child: Text(
             "DANH SÁCH ĐỊA DANH",
-            style: TextStyle(color: Color(0xffA6ED4B)),
+            style: TextStyle(color: Colors.black),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffA6ED4B),
       ),
       body: Column(
         children: <Widget>[

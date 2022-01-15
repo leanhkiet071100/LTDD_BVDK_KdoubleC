@@ -1,0 +1,113 @@
+{
+    "sites":[
+        {
+            "Id_Ddanh": 12,
+            "Ten_Ddanh": "Cánh đồng quạt gió",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "Tỉnh Lộ 31, Xã Vĩnh Trạch Đông,Bạc Liêu, Việt Nam",
+            "Canhvat": "Những trụ quạt gió khổng lồ ven bờ biển",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "Điện",
+            "Kinhdo": "9",
+            "Vido": "106",
+            "Ten_Hinhanh": "https://cdn3.ivivu.com/2017/03/canh-dong-quat-gio-bac-lieu-ivivu-10.png"
+        },
+        {
+            "Id_Ddanh": 13,
+            "Ten_Ddanh": "Rừng tràm Trà Sư",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "Ấp Văn Trà, Tịnh Biên, An Giang, Việt Nam",
+            "Canhvat": "Khu rừng tràm nguyên sinh",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "Rừng",
+            "Kinhdo": "11",
+            "Vido": "105",
+            "Ten_Hinhanh": "https://cdn3.ivivu.com/2017/03/rung-tram-tra-su-ivivu.png"
+        },
+        {
+            "Id_Ddanh": 14,
+            "Ten_Ddanh": "Làng nổi Tân Lập",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "QL62, ấp 3, Mộc Hóa, Long An, Việt Nam",
+            "Canhvat": "Ngôi làng nằm trong khu rừng tràm nguyên sinh",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "Rừng",
+            "Kinhdo": "11",
+            "Vido": "106",
+            "Ten_Hinhanh": "https://cdn3.ivivu.com/2017/03/lang-noi-tan-lap-ivivu-6.png"
+        },
+        {
+            "Id_Ddanh": 15,
+            "Ten_Ddanh": "Vườn quốc gia Tràm Chim",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "Khóm 4, Tam Nông, Đồng Tháp, Việt Nam",
+            "Canhvat": "Khu rừng rộng lớn, là noi tập trung của các loài chim di cư",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "Rừng",
+            "Kinhdo": "11",
+            "Vido": "105",
+            "Ten_Hinhanh": "https://cdn3.ivivu.com/2017/03/Di-san-anh-chim-troi-o-khu-ramsar-Tram-Chim-dip-29-ivivu-1.jpg"
+        },
+        {
+            "Id_Ddanh": 16,
+            "Ten_Ddanh": "Trại rắn Đồng Tâm",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "Bình Đức, Châu Thành, Tiền Giang, Việt Nam",
+            "Canhvat": "Khu trại tập trung nuôi nhiều loài rắn",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "không có",
+            "Kinhdo": "10",
+            "Vido": "106",
+            "Ten_Hinhanh": "https://123tadi.com/wp-content/uploads/2020/03/dalatavatran_optimized.jpg"
+        },
+        {
+            "Id_Ddanh": 17,
+            "Ten_Ddanh": "Chợ nổi Cái Răng",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "46 Đường Hai Bà Trưng, Tân An, Ninh Kiều, Cần Thơ, Việt Nam",
+            "Canhvat": "Vùng sông nước có nhiều tàu thuyền trao đổi mua bán trên sông",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "không có",
+            "Kinhdo": "10",
+            "Vido": "106",
+            "Ten_Hinhanh": "https://bandidau.com/blog/wp-content/uploads/2019/11/canh-nha-cong-tu-bac-lieu.jpg"
+        },
+        {
+            "Id_Ddanh": 18,
+            "Ten_Ddanh": "Nhà công tử Bạc Liêu",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "13 Điện Biên Phủ, Phường 3, Bạc Liêu, Việt Nam",
+            "Canhvat": "Ngồi nhà có lối kiến trúc cổ, tồn tại qua nhiều thời gian",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "không có",
+            "Kinhdo": "9",
+            "Vido": "106",
+            "Ten_Hinhanh": "https://thamhiemmekong.com/wp-content/uploads/2020/03/conthoison1.jpg"
+        },
+        {
+            "Id_Ddanh": 19,
+            "Ten_Ddanh": "Cù lao Thới Sơn",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "Thới Sơn, Thành phố Mỹ Tho, Tiền Giang, Việt Nam",
+            "Canhvat": "Một cừ lao nằm giữ dòng Mê Kong",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "không có",
+            "Kinhdo": "10",
+            "Vido": "106",
+            "Ten_Hinhanh": "https://cdn3.ivivu.com/2017/03/vi-vu-Tien-Giang-2n1d-kham-pha-net-kien-truc-dep-ivivu-10.jpg"
+        },
+        {
+            "Id_Ddanh": 20,
+            "Ten_Ddanh": "Khu sinh thái Xẻo Quýt",
+            "Ten_Goikhac": "không có",
+            "Diachi_Ddanh": "Ấp 4, Cao Lãnh, Đồng Tháp, Việt Nam",
+            "Canhvat": "Khu rừng nguyên sinh với khung cảnh tự nhiên hoang giả",
+            "Khihau": "Hai mùa(tháng 5-11 là mùa mưa, tháng 12-4 là mùa khô)",
+            "Tainguyen": "Rừng",
+            "Kinhdo": "10",
+            "Vido": "106",
+            "Ten_Hinhanh": "https://cdn3.ivivu.com/2017/03/xeo-quyt-ivivu-18.png"
+        }
+        
+    ]
+}
