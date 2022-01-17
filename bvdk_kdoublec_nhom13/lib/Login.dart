@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'Register.dart';
 import 'Screen_main.dart';
 import 'package:http/http.dart' as http;
@@ -20,7 +21,7 @@ class _LoginState extends State<Login> {
 
   Future<void> login() async {
     if (user.text.isNotEmpty && pass.text.isNotEmpty) {
-      var url = "http://192.168.1.11/flutter/login.php";
+      var url = "http://192.168.1.10/flutter/login.php";
       var response = await http.post(Uri.parse(url),
           body: ({
             "username": user.text,
@@ -36,6 +37,9 @@ class _LoginState extends State<Login> {
             backgroundColor: Colors.green,
             textColor: Colors.white,
             fontSize: 16.0);
+        SharedPreferences pres = await SharedPreferences.getInstance();
+        pres.setString("username", user.text);
+        pres.setString("password", pass.text);
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => ScreenMain()));
       }
