@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'Search.dart';
 import 'Sites.dart';
 import 'datapost/PostOject.dart';
@@ -64,6 +65,15 @@ class IndexState extends State<Index> {
               child: CircularProgressIndicator(),
             );
           }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return Post();
+          }));
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Color(0xffA6ED4B),
+      ),
     );
   }
 }
@@ -87,7 +97,7 @@ class PostList extends StatelessWidget {
                   child: Text('Q'),
                 ),
                 title: Text(
-                  'Nguyễn Thanh Quí',
+                  lsPosts[index].Hoten_Nguoidung,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 trailing: PopupMenuButton(
@@ -134,7 +144,7 @@ class PostList extends StatelessWidget {
                           }));
                         },
                         child: Text(
-                          'Điểm đến: Tây Sơn - Bình Định',
+                          'Điểm đến: ' + lsPosts[index].Ten_Ddanh,
                           style: TextStyle(
                               color: Colors.blue,
                               fontSize: 16,
@@ -145,8 +155,8 @@ class PostList extends StatelessWidget {
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
-                      child: Image.asset(
-                        'images/bk3.jpg',
+                      child: Image.network(
+                        lsPosts[index].Ten_Hinhanh,
                         fit: BoxFit.cover,
                       ),
                     ),

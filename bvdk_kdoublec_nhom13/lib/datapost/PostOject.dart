@@ -1,14 +1,19 @@
 class PostObject {
   final String Id_Baiviet;
-  final String Id_Nguoidung;
   final String Noidung;
   final String Luotthich;
+  final String Ten_Hinhanh;
+  final String Hoten_Nguoidung;
+  final String Ten_Ddanh;
 
-  PostObject(this.Id_Baiviet, this.Id_Nguoidung, this.Noidung, this.Luotthich);
+  PostObject(this.Id_Baiviet, this.Noidung, this.Luotthich, this.Ten_Hinhanh,
+      this.Hoten_Nguoidung, this.Ten_Ddanh);
 
   PostObject.fromJson(Map<String, dynamic> res)
       : Id_Baiviet = res["Id_Baiviet"],
-        Id_Nguoidung = res["Id_Nguoidung"],
         Noidung = res["Noidung"],
-        Luotthich = res["Luotthich"];
+        Luotthich = res["Luotthich"],
+        Ten_Hinhanh = res["Ten_Hinhanh"],
+        Hoten_Nguoidung = res["Hoten_Nguoidung"],
+        Ten_Ddanh = res["Ten_Ddanh"];
 }
