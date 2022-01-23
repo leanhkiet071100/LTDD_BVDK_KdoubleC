@@ -12,7 +12,7 @@ class PostProvider {
 
   static Future<List<PostObject>> fecthPost() async {
     final response =
-        await http.get(Uri.parse('http://192.168.1.10/DB_QLDL/Post.php'));
+        await http.get(Uri.parse('http://192.168.1.12/DB_QLDL/Post.php'));
     return parseCmt(response.body);
   }
 }

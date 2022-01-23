@@ -20,7 +20,7 @@ class PerInforState extends State<PerInfor> {
         alignment: Alignment.center,
         children: [
           Image.asset(
-            'images/bk5.jpg',
+            'images/bk1.jpg',
             width: 500,
             height: 225,
             fit: BoxFit.cover,
@@ -29,7 +29,7 @@ class PerInforState extends State<PerInfor> {
             padding: EdgeInsets.only(top: 65),
             child: CircleAvatar(
               radius: 80,
-              backgroundImage: AssetImage('images/bk5.jpg'),
+              backgroundImage: AssetImage('images/bk1.jpg'),
               backgroundColor: Colors.black,
             ),
           ),
@@ -41,7 +41,7 @@ class PerInforState extends State<PerInfor> {
     padding: EdgeInsets.only(top: 20),
     alignment: Alignment.center,
     child: Text(
-      'Nguyễn Thanh Quí',
+      'Nguyễn Văn A',
       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
     ),
   );
