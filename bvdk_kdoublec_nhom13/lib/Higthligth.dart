@@ -1,11 +1,8 @@
-import 'package:bvdk_kdoublec_nhom13/Index.dart';
-
-import 'datajson/SitesObject.dart';
-import 'datajson/SitesProvider.dart';
 import 'package:flutter/material.dart';
 import 'Search.dart';
 import 'Sites.dart';
-import 'DiaDanh/diadanh.dart';
+import 'datajson/SitesObject.dart';
+import 'datajson/SitesProvider.dart';
 
 class Hightlight extends StatefulWidget {
   const Hightlight({Key? key}) : super(key: key);
@@ -17,28 +14,21 @@ class Hightlight extends StatefulWidget {
 }
 
 class HightlightState extends State<Hightlight> {
-  List<SitesObject> lsSit = [];
-  TextEditingController txtname = TextEditingController();
-  TextEditingController txtDc = TextEditingController();
-  TextEditingController txtpic = TextEditingController();
-  TextEditingController txtnb = TextEditingController();
-
-  void _LoadSites() async {
-    final data = await SitesProvider.getAllSites();
+  List<SitesObject> lsPosts = [];
+  void _LoadPosts() async {
+    final data = await SitesProvider.fecthSites();
     setState(() {});
-    lsSit = data;
+    lsPosts = data;
   }
 
   @override
   void initState() {
     super.initState();
-    _LoadSites();
+    _LoadPosts();
   }
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffA6ED4B),
@@ -78,8 +68,8 @@ class HightlightState extends State<Hightlight> {
             Container(
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(50),
-                    bottomLeft: Radius.circular(50)),
+                    bottomRight: Radius.circular(30),
+                    bottomLeft: Radius.circular(30)),
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
@@ -106,8 +96,8 @@ class HightlightState extends State<Hightlight> {
             Expanded(
               child: ListView.builder(
                 shrinkWrap: true,
-                itemCount: 5,
-                itemBuilder: (BuildContext context, index) {
+                itemCount: lsPosts.length,
+                itemBuilder: (context, index) {
                   return Card(
                     child: Column(
                       children: [
@@ -117,9 +107,9 @@ class HightlightState extends State<Hightlight> {
                           width: 400,
                           height: 180,
                           child: ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
                             child: Image.network(
-                              lsSit[index].Ten_Hinhanh,
+                              lsPosts[index].Ten_Hinhanh_Ddanh,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -128,9 +118,18 @@ class HightlightState extends State<Hightlight> {
                           alignment: Alignment.topLeft,
                           padding: EdgeInsets.only(left: 20),
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Sites(
+                                    lsSit: lsPosts[index],
+                                  ),
+                                ),
+                              );
+                            },
                             child: Text(
-                              lsSit[index].Ten_Ddanh,
+                              lsPosts[index].Ten_Ddanh,
                               style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                   fontWeight: FontWeight.bold,
@@ -150,7 +149,7 @@ class HightlightState extends State<Hightlight> {
                               ),
                               Flexible(
                                 child: Text(
-                                  lsSit[index].Diachi_Ddanh,
+                                  lsPosts[index].Diachi_Ddanh,
                                   style: TextStyle(
                                       fontStyle: FontStyle.italic,
                                       color: Colors.black,
@@ -172,3 +171,79 @@ class HightlightState extends State<Hightlight> {
     );
   }
 }
+
+/*class SitesStateLoad extends StatelessWidget {
+  final List<SitesObject> lsSites;
+  const SitesStateLoad({Key? key, required this.lsSites}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: lsSites.length,
+      itemBuilder: (BuildContext context, index) {
+        return Card(
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 10, right: 10, left: 10),
+                width: 400,
+                height: 180,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  child: Image.network(
+                    lsSites[index].Ten_Hinhanh_Ddanh,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.topLeft,
+                padding: EdgeInsets.only(left: 20),
+                child: TextButton(
+                  onPressed: () {
+                    /*Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Sites(
+                                  lsSit: lsSites[index],
+                                )));*/
+                  },
+                  child: Text(
+                    lsSites[index].Ten_Ddanh,
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 20),
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.topLeft,
+                padding: EdgeInsets.only(left: 20, bottom: 5),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.location_on,
+                      color: Colors.red,
+                    ),
+                    Flexible(
+                      child: Text(
+                        lsSites[index].Diachi_Ddanh,
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic,
+                            color: Colors.black,
+                            fontSize: 18),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}*/

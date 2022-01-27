@@ -38,18 +38,18 @@ class _ScreenMainState extends State<ScreenMain> {
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Trang chủ',
+              backgroundColor: Colors.black,
+            ),
+            BottomNavigationBarItem(
               icon: Icon(Icons.highlight),
               label: 'Nổi bật',
               backgroundColor: Colors.black,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.list),
-              label: 'Nhu cầu',
-              backgroundColor: Colors.black,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Trang chủ',
+              label: 'Bài viết',
               backgroundColor: Colors.black,
             ),
             BottomNavigationBarItem(

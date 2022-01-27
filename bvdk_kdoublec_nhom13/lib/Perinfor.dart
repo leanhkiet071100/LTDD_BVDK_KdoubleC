@@ -255,10 +255,12 @@ class PerInforState extends State<PerInfor> {
                             padding: EdgeInsets.only(bottom: 5),
                             child: TextButton(
                               onPressed: () {
-                                Navigator.push(context,
+                                /*Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                  return Sites();
-                                }));
+                                  return Sites(
+                                    lsSit:,
+                                  );
+                                }));*/
                               },
                               child: Text(
                                 'Điểm đến: Tây Sơn - Bình Định',

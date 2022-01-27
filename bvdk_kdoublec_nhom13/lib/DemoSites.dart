@@ -1,38 +1,35 @@
-import 'dart:ffi';
+/*import 'dart:ffi';
 
 import 'package:bvdk_kdoublec_nhom13/datajson/SitesObject.dart';
 import 'package:flutter/material.dart';
 import 'Search.dart';
 import 'Sitesdetails.dart';
-import 'dataharbou/HarbouObject.dart';
 import 'datapost/PostOject.dart';
 import 'food/food.dart';
 import 'food/restaurant.dart';
 import 'harbourage/harbourage.dart';
 import 'package:path/path.dart';
 
-class Sites extends StatefulWidget {
-  final SitesObject lsSit;
-  const Sites({Key? key, required this.lsSit}) : super(key: key);
+class DemoSites extends StatefulWidget {
+  final PostObject lsSit;
+  const DemoSites({Key? key, required this.lsSit}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return SitesState(lsSit: lsSit);
+    return DemoSitesState(lsSit: lsSit);
   }
 }
 
-class SitesState extends State<Sites> {
-  final SitesObject lsSit;
-  SitesState({required this.lsSit});
+class DemoSitesState extends State<DemoSites> {
+  final PostObject lsSit;
+  DemoSitesState({required this.lsSit});
   TextEditingController txtNameSit = TextEditingController();
   TextEditingController txtNamePic = TextEditingController();
   List<PostObject> lsPosts = [];
-  List<SitesObject> lsSites = [];
-  List<HarbouObject> lsHarbou = [];
   void building() async {
     setState(() {});
     txtNameSit.text = lsSit.Ten_Ddanh;
-    txtNamePic.text = lsSit.Ten_Hinhanh_Ddanh;
+    txtNamePic.text = lsSit.Ten_Hinhanh;
   }
 
   @override
@@ -84,22 +81,12 @@ class SitesState extends State<Sites> {
           child: Card(
             color: Colors.white,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
-                  alignment: Alignment.center,
-                  child: Text(
-                    lsSit.Ten_Ddanh,
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffA6ED4B)),
-                  ),
-                ),
                 Container(
                   width: 400,
                   height: 300,
-                  padding: EdgeInsets.only(top: 5, left: 10, right: 10),
+                  padding: EdgeInsets.only(top: 10, left: 10, right: 10),
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
                     child: Image.network(
@@ -109,54 +96,19 @@ class SitesState extends State<Sites> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 15),
-                  child: Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 10),
-                        child: Icon(
-                          Icons.assessment_outlined,
-                          color: Colors.greenAccent,
-                          size: 30,
-                        ),
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.red,
-                        size: 30,
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.red,
-                        size: 30,
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.red,
-                        size: 30,
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.red,
-                        size: 30,
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.red,
-                        size: 30,
-                      )
-                    ],
+                  padding: EdgeInsets.only(top: 10, left: 20),
+                  child: Text(
+                    lsSit.Ten_Ddanh,
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xffA6ED4B)),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.only(top: 10, left: 20),
                   child: Row(
                     children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 10),
-                        child: Icon(Icons.location_on_outlined,
-                            color: Colors.red, size: 30),
-                      ),
                       Flexible(
                         child: Container(
                           child: Text(
@@ -169,31 +121,37 @@ class SitesState extends State<Sites> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.only(top: 10, left: 20),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 10),
-                        child: Icon(Icons.description,
-                            color: Colors.blue, size: 30),
-                      ),
                       Flexible(
                         child: Container(
                           child: Text(
-                            'Vùng đất nẳm ở trung tỉnh Bình Định, huyện Tây Sơn mang đến cho chúng ta nhũng trãi nghiệm thật tuyệt vời. Đến đây bạn sẽ được tận hưởng hương vị của miền Trung Việt Nam, nhiều món ăn ngon, nhiều nới du lịch, nghĩ dưỡng hạng cao, chắc chắn bạn sẽ có một trải nghiệm tuyệt vời.',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                            ),
+                            'Kinh độ: ' + lsSit.Kinhdo,
+                            style: TextStyle(fontSize: 18),
                           ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.only(top: 10, left: 20),
+                  child: Row(
+                    children: [
+                      Flexible(
+                        child: Container(
+                          child: Text(
+                            'Vĩ độ: ' + lsSit.Vido,
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 10, left: 20, right: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -239,9 +197,7 @@ class SitesState extends State<Sites> {
                           onPressed: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return Restaurant(
-                                lsSiteRes: lsSit,
-                              );
+                              return Restaurant();
                             }));
                           },
                         ),
@@ -267,65 +223,9 @@ class SitesState extends State<Sites> {
                           onPressed: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return Harbourage(lsSite: lsSit);
+                              return Harbourage();
                             }));
                           },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Divider(
-                  color: Colors.black,
-                ),
-                Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 5, bottom: 5),
-                        child: Text(
-                          'Các chi tiết khác của địa danh',
-                          style: TextStyle(
-                              color: Colors.blueAccent,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic,
-                              fontSize: 24),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(top: 20, left: 10),
-                        child: Text(
-                          'Khí hậu: ' + lsSit.Khihau,
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(top: 20, left: 10),
-                        child: Text(
-                          'Khoáng sản: ' + lsSit.Tainguyen,
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(top: 20, left: 10),
-                        child: Text(
-                          'Cảnh vật: ' + lsSit.Canhvat,
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 20, right: 100),
-                        child: Text(
-                          'Kinh độ: ' + lsSit.Kinhdo,
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(left: 10, top: 20, bottom: 30),
-                        child: Text(
-                          'Vĩ độ: ' + lsSit.Vido,
-                          style: TextStyle(fontSize: 18),
                         ),
                       ),
                     ],
@@ -338,4 +238,4 @@ class SitesState extends State<Sites> {
       ),
     );
   }
-}
+}*/

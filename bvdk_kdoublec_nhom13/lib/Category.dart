@@ -54,8 +54,8 @@ class CategoryState extends State<Category> {
             Container(
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(50),
-                    bottomLeft: Radius.circular(50)),
+                    bottomRight: Radius.circular(30),
+                    bottomLeft: Radius.circular(30)),
                 child: Stack(
                   alignment: Alignment.center,
                   children: [

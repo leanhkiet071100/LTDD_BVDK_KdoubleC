@@ -21,7 +21,7 @@ class _LoginState extends State<Login> {
 
   Future<void> login() async {
     if (user.text.isNotEmpty && pass.text.isNotEmpty) {
-      var url = "http://192.168.1.12/flutter/login.php";
+      var url = "http://192.168.1.3/DB_QLDL/login.php";
       var response = await http.post(Uri.parse(url),
           body: ({
             "username": user.text,

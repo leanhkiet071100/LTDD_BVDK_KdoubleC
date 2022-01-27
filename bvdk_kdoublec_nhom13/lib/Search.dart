@@ -15,12 +15,12 @@ class Search extends StatefulWidget {
 class SearchState extends State<Search> {
   List<SitesObject> lsSites = [];
   TextEditingController txtsearch = TextEditingController();
-  void _searchContact() async {
+  /*void _searchContact() async {
     if (txtsearch.text.isNotEmpty) {
       setState(() {});
       lsSites = await SitesProvider.searchSites(txtsearch.text);
     }
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +33,6 @@ class SearchState extends State<Search> {
             controller: txtsearch,
             decoration:
                 InputDecoration.collapsed(hintText: 'Tìm địa danh muốn đi'),
-            onChanged: (text) {
-              _searchContact();
-            },
           ),
         ),
       ),

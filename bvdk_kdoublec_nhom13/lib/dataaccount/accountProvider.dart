@@ -15,12 +15,12 @@ class AccountProvider {
 
   static Future<List<AccountObject>> fecthPost() async {
     final response =
-        await http.get(Uri.parse('http://192.168.1.12/DB_QLDL/Post.php'));
+        await http.get(Uri.parse('http://192.168.1.3/DB_QLDL/Post.php'));
     return parseCmt(response.body);
   }
 
   static Future<List<AccountObject>> fecthPost1() async {
-    var url = "http://192.168.1.12/flutter/quanlythongtincanhan.php";
+    var url = "http://192.168.1.3/DB_QLDL/quanlythongtincanhan.php";
     SharedPreferences pres = await SharedPreferences.getInstance();
     var username = pres.getString("username");
     var password = pres.getString("password");

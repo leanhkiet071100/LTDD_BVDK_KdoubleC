@@ -1,31 +1,19 @@
 import 'dart:convert';
 import 'SitesObject.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
 class SitesProvider {
-  static Future<List<dynamic>> readJsonData() async {
-    var jsontxt = await rootBundle.loadString('data/fullsites.json');
-    var data = json.decode(jsontxt);
-    return data['sites'];
+  static List<SitesObject> parseCmt(String source) {
+    final parsed = jsonDecode(source).cast<Map<String, dynamic>>();
+    List<SitesObject> ls =
+        parsed.map<SitesObject>((e) => SitesObject.fromJson(e)).toList();
+    return ls;
   }
 
-  static Future<List<SitesObject>> getAllSites() async {
-    List<SitesObject> lsResult = [];
-    List<dynamic> data = await readJsonData();
-    lsResult = data.map((e) => SitesObject.fromJson(e)).toList();
-    return lsResult;
-  }
-
-  static Future<List<SitesObject>> searchSites(String strSearch) async {
-    List<SitesObject> lsResult = [];
-    List<dynamic> data = await readJsonData();
-    data.forEach((e) {
-      SitesObject c = SitesObject.fromJson(e);
-      if (c.Ten_Ddanh.toUpperCase().contains(strSearch.toUpperCase()) ||
-          c.Diachi_Ddanh.toUpperCase().contains(strSearch)) {
-        lsResult.add(c);
-      }
-    });
-    return lsResult;
+  static Future<List<SitesObject>> fecthSites() async {
+    final response =
+        await http.get(Uri.parse('http://192.168.1.3/DB_QLDL/sites.php'));
+    return parseCmt(response.body);
   }
 }

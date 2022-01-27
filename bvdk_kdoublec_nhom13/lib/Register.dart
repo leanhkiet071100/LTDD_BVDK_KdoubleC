@@ -34,7 +34,7 @@ class _RegisterState extends State<Register> {
           textColor: Colors.white,
           fontSize: 16.0);
     } else {
-      var url = "http://192.168.1.12/DB_QLDL/Register.php";
+      var url = "http://192.168.1.3/DB_QLDL/Register.php";
       var response = await http.post(Uri.parse(url), body: {
         "Hoten_Nguoidung": name.text,
         "Email": email.text,
